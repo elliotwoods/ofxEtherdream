@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{8fc74cc6-772e-464f-9304-993cebea8c89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs">
+      <UniqueIdentifier>{b5258993-e78f-46ca-912f-7be93cd954a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs\libetherdream">
+      <UniqueIdentifier>{cecdc785-91ea-4621-9e5c-b67e31b05e11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs\libetherdream\src">
+      <UniqueIdentifier>{184f5dd1-710e-4310-bf32-6642953ea5f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libs\libetherdream\common">
+      <UniqueIdentifier>{cab36546-426e-4186-99be-a45cb481f59f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ofxEtherdream">
+      <UniqueIdentifier>{9b5b9fc0-a445-4c5b-ae3e-245fcacfc2de}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\ofxEtherdream.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libs\libetherdream\src\etherdream.cpp">
+      <Filter>libs\libetherdream\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxEtherdream\Initializer.cpp">
+      <Filter>src\ofxEtherdream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxEtherdream\Device.cpp">
+      <Filter>src\ofxEtherdream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxEtherdream\Frame.cpp">
+      <Filter>src\ofxEtherdream</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ofxEtherdream\Point.cpp">
+      <Filter>src\ofxEtherdream</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\ofxEtherdream.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\libetherdream\src\etherdream.h">
+      <Filter>libs\libetherdream\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libs\libetherdream\common\protocol.h">
+      <Filter>libs\libetherdream\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxEtherdream\Initializer.h">
+      <Filter>src\ofxEtherdream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxEtherdream\Device.h">
+      <Filter>src\ofxEtherdream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxEtherdream\Frame.h">
+      <Filter>src\ofxEtherdream</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ofxEtherdream\Point.h">
+      <Filter>src\ofxEtherdream</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
