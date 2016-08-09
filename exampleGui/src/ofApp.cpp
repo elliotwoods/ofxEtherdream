@@ -46,10 +46,8 @@ void ofApp::refreshDevices() {
 						if (deviceConnection->device == device) {
 							return true;
 						}
-						else {
-							return false;
-						}
 					}
+					return false;
 				},
 				
 				//set function

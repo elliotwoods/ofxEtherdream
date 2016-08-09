@@ -89,13 +89,13 @@ enum dac_state {
 struct etherdream {
 	std::mutex mutex;
 	std::condition_variable loop_cond;
+	std::thread workerthread;
 
 	struct buffer_item buffer[BUFFER_NFRAMES];
 	int frame_buffer_read;
 	int frame_buffer_fullness;
 	int bounce_count;
 
-	std::thread workerthread;
 
 	struct in_addr addr;
 	struct etherdream_conn conn;
@@ -901,6 +901,10 @@ static void *watch_for_dacs() {
 		/* Make a new DAC entry */
 		struct etherdream *new_dac;
 		new_dac = new etherdream();
+		{
+			auto offset = sizeof(std::mutex) + sizeof(std::condition_variable) + sizeof(std::thread);
+			memset((char *)new_dac + offset, 0, sizeof(etherdream) - offset);
+		}
 
 		new_dac->addr = src.sin_addr;
 		memcpy(new_dac->mac_address, buf.mac_address, 6);
